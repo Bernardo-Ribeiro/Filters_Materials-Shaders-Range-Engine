@@ -1,0 +1,13 @@
+# Ignora todos os arquivos com a extensão .ini
+*.ini
+
+# Ignora todos os arquivos com a extensão .range1
+*.range1
+
+# Ignora a pasta .vscode e todo o seu conteúdo
+.vscode/
+
+# Ignora a pasta _python_ e todo o seu conteúdo
+_python_/
+
+.pyc
