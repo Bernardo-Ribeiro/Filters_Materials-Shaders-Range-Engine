@@ -6,6 +6,24 @@ This guide explains how to create custom 2D post-processing filters for the Rang
 
 Range Engine (a Blender Game Engine fork) allows you to create custom visual effects using 2D filters. These filters are post-processing effects applied to the rendered image, allowing you to create various visual effects like blur, chromatic aberration, color grading, and more.
 
+## Folder Overview
+
+This project includes the following folders and purpose-built examples to help you create and test 2D post-processing filters:
+
+- `Template_ShaderFilter`
+    - `scripts/shader.py` — example Python component that demonstrates a two-pass 2D filter system (buffer + image). This is the recommended starting point.
+    - `shadersFilter.range` — `.range` scene (Range/Blender) with the example already configured. Open this file to see the example running.
+    - Usage: Start here when creating an offscreen shader — you usually don't need to implement everything from scratch: copy and adapt the shader code and the component script.
+
+- `Scripts`
+    - Contains `.glsl` / `.frag` shader files and helper scripts (effect examples). These are ready GLSL codes you can attach or paste into the Python component.
+    - Usage: Copy the GLSL you want into the template or into a new component.
+
+- `Filters and Shaders Materials`
+    - Contains `.range` scene files where each shader is already applied and working.
+    - Usage: Open a `.range` scene to see the shader applied in context — useful for learning the parameters/layer setup and for testing.
+    
+
 ## Understanding the Template
 
 The `Template_ShaderFilter` directory contains a complete example showing how to implement a 2D filter system with two render passes.
